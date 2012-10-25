@@ -36,20 +36,21 @@ class Console extends Core\View
       if ($stdout) {
         $_console = $form->textarea('stdout')->node('textarea');
         $_console->readonly = true;
-        $_console->data('mode', 'text/x-php');
+        $_console->data(array(
+            'editor' => 'codemirror', 'mode' => 'text/x-php', 'theme' => 'monokai'
+          ));
         $_console->text($stdout);
       }
-      $console = $form
-        ->textarea('stdin', array(
+      $console = $form->textarea('stdin', array(
           'readonly' => false
         ))->node('textarea');
-      $console->data('mode', 'text/x-php');
+      $console->data(array(
+          'editor' => 'codemirror', 'mode' => 'text/x-php', 'theme' => 'monokai'
+        ));
       $console->text($stdin);
-      $form
-        ->submit('execute',
-          array(
-            'title' => $this->locale->t('Evaluate')
-          ));
+      $form->submit('execute', array(
+          'title' => $this->locale->t('Evaluate')
+        ));
 
       return $this->response->body($page->compose($form));
     }
