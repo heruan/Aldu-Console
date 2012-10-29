@@ -39,8 +39,11 @@ class Console extends Core\Controller
 
   private function evaluate($stdin)
   {
+    $html_errors = ini_get('html_errors');
     ob_start();
+    ini_set('html_errors', 'off');
     eval($stdin);
+    ini_set('html_errors', $html_errors);
     return ob_get_clean();
   }
 }

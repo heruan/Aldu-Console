@@ -22,5 +22,5 @@ use Aldu\Core;
 
 class Console extends Core\Model
 {
-  
+
 }
