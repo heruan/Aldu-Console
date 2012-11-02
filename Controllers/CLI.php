@@ -1,6 +1,6 @@
 <?php
 /**
- * Aldu\Console\Controllers\Console
+ * Aldu\Console\Controllers\CLI
  *
  * AlduPHP(tm) : The Aldu Network PHP Framework (http://aldu.net/php)
  * Copyright 2010-2012, Aldu Network (http://aldu.net)
@@ -19,7 +19,7 @@
 namespace Aldu\Console\Controllers;
 use Aldu\Core;
 
-class Console extends Core\Controller
+class CLI extends Core\Controller
 {
 
   public function main()

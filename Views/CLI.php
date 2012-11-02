@@ -1,6 +1,6 @@
 <?php
 /**
- * Aldu\Console\Views\Console
+ * Aldu\Console\Views\CLI
  *
  * AlduPHP(tm) : The Aldu Network PHP Framework (http://aldu.net/php)
  * Copyright 2010-2012, Aldu Network (http://aldu.net)
@@ -20,7 +20,7 @@ namespace Aldu\Console\Views;
 use Aldu\Core;
 use Aldu\Core\View\Helper;
 
-class Console extends Core\View
+class CLI extends Core\View
 {
 
   public function main($stdin = '', $stdout = '')
